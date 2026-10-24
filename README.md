@@ -31,7 +31,7 @@ An intelligent desktop voice assistant and general-purpose Windows PC Control Ag
 
 ### 1. Activate Environment
 ```cmd
-envjarvis\Scripts\activate
+envalexa\Scripts\activate
 ```
 
 ### 2. Configuration (.env)
