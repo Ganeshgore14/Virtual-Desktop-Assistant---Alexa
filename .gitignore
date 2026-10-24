@@ -17,10 +17,12 @@ __pycache__/
 *.so
 .pytest_cache/
 
-# SQLite Database
+# SQLite Database & User Data
 jarvis.db
 alexa.db
 *.db
+contacts.csv
+*.csv
 
 # Generated Media & Logs
 generatedimage.png
