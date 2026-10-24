@@ -1,0 +1,37 @@
+# Virtual Environment
+envjarvis/
+venv/
+.venv/
+env/
+
+# Environment Variables & Secrets (CRITICAL: Do not commit actual keys)
+.env
+.env.local
+.env.*.local
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# SQLite Database (optional - keep empty schema template if desired)
+jarvis.db
+
+# Generated Media & Logs
+generatedimage.png
+captured_photo_*.jpg
+*.log
+cookies.json
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Specific
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
