@@ -42,13 +42,4 @@ def init_db():
 
 if __name__ == '__main__':
     init_db()
-    conn = get_connection()
-    cursor = conn.cursor()
-    try:
-        cursor.execute("UPDATE contacts SET name = 'omkar' WHERE mobile_no = '87885 70359'")
-        conn.commit()
-        print("Database initialized and updated.")
-    except Exception as e:
-        print(f"DB update error: {e}")
-    finally:
-        conn.close()
+    print("Database tables initialized successfully.")
