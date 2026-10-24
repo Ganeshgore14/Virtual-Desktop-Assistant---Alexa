@@ -3,7 +3,17 @@ import sqlite3
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DB_PATH = str(BASE_DIR / "jarvis.db")
+DB_PATH = str(BASE_DIR / "alexa.db")
+
+# Migrate legacy jarvis.db if alexa.db does not exist yet or is empty
+legacy_db = BASE_DIR / "jarvis.db"
+alexa_db = BASE_DIR / "alexa.db"
+if (not alexa_db.exists() or alexa_db.stat().st_size == 0) and legacy_db.exists():
+    try:
+        import shutil
+        shutil.copy2(legacy_db, alexa_db)
+    except Exception as e:
+        print(f"DB migration error: {e}")
 
 def get_connection():
     return sqlite3.connect(DB_PATH)

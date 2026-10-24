@@ -1,4 +1,4 @@
-# J.A.R.V.I.S / Alexa AI Assistant: Complete Features Guide
+# Alexa AI Assistant: Complete Features Guide
 
 Comprehensive documentation of all architectural components, autonomous agent capabilities, voice control tools, vision modules, and command references.
 
@@ -170,7 +170,7 @@ UNDERSTAND REQUEST ➔ PLAN ➔ SELECT TOOLS ➔ CHECK PERMISSIONS ➔ EXECUTE �
 - **Time & Date Announcement**:
   - Speaks current local time or full formatted date.
 - **Desktop Notes (`take_note`, `read_notes`)**:
-  - Appends timestamped notes to `Documents/JARVIS_Notes.txt`.
+  - Appends timestamped notes to `Documents/Alexa_Notes.txt`.
   - Reads back the latest note and opens the file in Notepad.
 - **Voice Timers (`set_timer`)**:
   - Asynchronous countdown timers for seconds or minutes with voice completion alerts.

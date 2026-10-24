@@ -581,7 +581,7 @@ def empty_recycle_bin(speak_func=None):
             speak_func("Could not empty the Recycle Bin.")
 
 def take_note(query, speak_func=None):
-    """Saves a note to Documents/JARVIS_Notes.txt with timestamp."""
+    """Saves a note to Documents/Alexa_Notes.txt with timestamp."""
     note_text = query.replace("take a note", "").replace("take note", "").replace("save note", "").strip()
     if not note_text:
         if speak_func:
@@ -590,7 +590,7 @@ def take_note(query, speak_func=None):
 
     notes_dir = Path.home() / "Documents"
     notes_dir.mkdir(parents=True, exist_ok=True)
-    notes_file = notes_dir / "JARVIS_Notes.txt"
+    notes_file = notes_dir / "Alexa_Notes.txt"
     
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %I:%M %p")
     try:
@@ -602,8 +602,11 @@ def take_note(query, speak_func=None):
         print(f"take_note error: {e}")
 
 def read_notes(speak_func=None):
-    """Reads the latest notes from Documents/JARVIS_Notes.txt and opens the file."""
-    notes_file = Path.home() / "Documents" / "JARVIS_Notes.txt"
+    """Reads the latest notes from Documents/Alexa_Notes.txt (or legacy JARVIS_Notes.txt) and opens the file."""
+    notes_file = Path.home() / "Documents" / "Alexa_Notes.txt"
+    legacy_file = Path.home() / "Documents" / "JARVIS_Notes.txt"
+    if not notes_file.exists() and legacy_file.exists():
+        notes_file = legacy_file
     if not notes_file.exists():
         if speak_func:
             speak_func("You have no saved notes yet.")

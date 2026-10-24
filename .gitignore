@@ -16,8 +16,10 @@ __pycache__/
 *.so
 .pytest_cache/
 
-# SQLite Database (optional - keep empty schema template if desired)
+# SQLite Database
 jarvis.db
+alexa.db
+*.db
 
 # Generated Media & Logs
 generatedimage.png

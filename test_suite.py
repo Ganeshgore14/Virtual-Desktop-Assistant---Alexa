@@ -7,7 +7,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-class JarvisUnitTest(unittest.TestCase):
+class AlexaUnitTest(unittest.TestCase):
     def test_01_config_loading(self):
         """Test that configuration parameters load properly with valid types."""
         from engine.config import ASSISTANT_NAME, GENAI_API_KEY, BASE_DIR
@@ -185,7 +185,7 @@ class JarvisUnitTest(unittest.TestCase):
         self.assertEqual(remove_words("alexa call john", ["alexa"]), "call john")
 
     def test_17_db_schema_isolation(self):
-        """Verify db get_connection connects cleanly to jarvis.db without import side-effects."""
+        """Verify db get_connection connects cleanly to alexa.db without import side-effects."""
         from engine.db import get_connection
         conn = get_connection()
         self.assertIsNotNone(conn)

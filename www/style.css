@@ -22,8 +22,8 @@ body {
   background: black;
 }
 
-/* Centered Jarvis Heading */
-.jarvis {
+/* Centered Alexa Heading */
+.alexa {
   position: absolute;
   top: 75%;
   left: 50%;
@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-.jarvis h3 {
+.alexa h3 {
   font-size: 1.5rem;
   text-shadow: 0  0 20px cyan;
   font-family: cursive;

@@ -14,12 +14,8 @@ from engine.command import speak
 from engine.config import ASSISTANT_NAME, GENAI_API_KEY, EMAIL_ADDRESS, EMAIL_PASSWORD, PORCUPINE_ACCESS_KEY
 from engine.helper import extract_yt_term, remove_words
 
-# Resolve database path relative to project root
 BASE_DIR = Path(__file__).resolve().parent.parent
-DB_PATH = str(BASE_DIR / "jarvis.db")
-
-def get_db():
-    return sqlite3.connect(DB_PATH)
+from engine.db import get_connection as get_db, DB_PATH
 
 @eel.expose
 def playAssistantSound():

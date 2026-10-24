@@ -1,4 +1,4 @@
-# J.A.R.V.I.S / Alexa Autonomous AI Voice Assistant & PC Control Agent
+# Alexa Autonomous AI Voice Assistant & PC Control Agent
 
 An intelligent desktop voice assistant and general-purpose Windows PC Control Agent, powered by Google Gemini AI, SpeechRecognition, PyAudio, Eel, and a dynamic Tool-Calling Engine.
 
